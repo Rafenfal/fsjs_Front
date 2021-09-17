@@ -1,7 +1,9 @@
 import React from 'react';
+import Navigation from '../components/Navigation';
 
 const Home = () => (
   <div className="home">
+    <Navigation />
     <h1>Accueil</h1>
   </div>
 );

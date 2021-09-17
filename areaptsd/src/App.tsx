@@ -1,14 +1,20 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import NotFound from './pages/NotFound';
+import About from './pages/About';
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello React</h1>
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" exact component={About} />
+        <Route component={NotFound} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
